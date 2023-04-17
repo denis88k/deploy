@@ -1,15 +1,15 @@
 {
   "name": "solutiontechvent",
   "private": true,
-  "homepage": "https://denis88k.github.io/deploy/",
+  "homepage": "https://denis88k.github.io/deploy",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist",
-    "predeploy": "yarn build"
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "gh-pages": "^5.0.0",

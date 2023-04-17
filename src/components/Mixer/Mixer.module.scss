@@ -108,6 +108,15 @@ $size: 30px;
     font-size: 22px;
     color: white;
     animation: textShow 0.25s ease 1 forwards;
+    @keyframes textShow {
+        0% {
+            opacity: 0;
+        }
+    
+        100% {
+            opacity: 1;
+        }
+    }
 
     &::after {
         position: absolute;
@@ -118,19 +127,7 @@ $size: 30px;
         font-size: 40px;
         color: green;
         animation: checkShow 1.7s ease 1 0.45s forwards;
-    }
-}
-
-@keyframes textShow {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
+        
 @keyframes checkShow {
     0% {
         width: 0;
@@ -142,3 +139,7 @@ $size: 30px;
         right: -35px;
     }
 }
+    }
+}
+
+
