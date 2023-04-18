@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { valves, pumps } from './data'
 import styles from './Mixer.module.scss'
+import bird from './../../assets/img/bird.gif'
 
 const Mixer = () => {
   const [consumption, setConsumption] = useState(0.5)
