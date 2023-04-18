@@ -12,10 +12,10 @@ const Mixer = () => {
 
   const roundingNumbers = 2
   const mixerName = [
-    '15-1', '15-1,6', '15-2,5',
-    '20-4', '20-6,3',
-    '25-6,3', '25-10', '32-16', '40-25',
-    '50-40'
+    '15 - 1', '15 - 1,6', '15 - 2,5',
+    '20 - 4', '20 - 6,3',
+    '25 - 6,3', '25 - 10', '32 - 16', '40 - 25',
+    '50 - 40'
   ]
 
   const solutionMixer = () => {
@@ -141,7 +141,7 @@ const Mixer = () => {
 
           <tbody className="table__result">
             {/* может когда нет данных в массиве добавлять цитаты великих людей */}
-            {resultTable.map((result, index) => (
+            {resultTable.map((result) => (
               <tr
                 className={[styles.row, result.match ? styles.row__match : ''].join(' ')}
                 key={result.mixerName}
@@ -151,7 +151,7 @@ const Mixer = () => {
                 <td>{result.valvePressureDrop.toFixed(roundingNumbers).replace(/\./, ',')}</td>
                 <td>0,25&nbsp;(0,15)</td>
                 {
-                  (0.15 * 0.9 < result.valveАuthority)
+                  (0.15 * 0.9 <= result.valveАuthority)
                     ? <td>&lt;</td>
                     // : <td style={{ backgroundColor: 'rgba(255, 0, 0, 0.5)' }}>&gt;</td>
                     // : <td style={{ backgroundColor: 'rgba(125, 21, 2, 0.75)' }}>&gt;</td>
@@ -159,7 +159,7 @@ const Mixer = () => {
                 }
                 <td>{result.valveАuthority.toFixed(roundingNumbers).replace(/\./, ',')}</td>
                 {
-                  (result.valveАuthority < 0.8 * 1.1)
+                  (result.valveАuthority <= 0.8 * 1.1)
                     ? <td>&lt;</td>
                     // : <td style={{ backgroundColor: 'rgba(255, 0, 0, 0.5)' }}>&gt;</td>
                     // : <td style={{ backgroundColor: 'rgba(125, 21, 2, 0.75)' }}>&gt;</td>
@@ -168,11 +168,11 @@ const Mixer = () => {
                 <td>0,8</td>
                 <td>{result.totalPressureDrop.toFixed(roundingNumbers).replace(/\./, ',')}</td>
                 {
-                  (result.totalPressureDrop > result.pumpPressure)
+                  (result.totalPressureDrop <= (result.pumpPressure*1.1))
                     // ? <td style={{ backgroundColor: 'rgba(255, 0, 0, 0.5)' }}>&gt;</td>
                     // ? <td style={{ backgroundColor: 'rgba(125, 21, 2, 0.75)' }}>&gt;</td>
-                    ? <td style={{ backgroundColor: 'rgb(155, 12, 9, 0.75)' }}>&gt;</td>
-                    : <td>&lt;</td>
+                    ? <td>&lt;</td>
+                    : <td style={{ backgroundColor: 'rgb(155, 12, 9, 0.75)' }}>&gt;</td>
                 }
                 <td>{result.pumpPressure.toFixed(roundingNumbers).replace(/\./, ',')}</td>
               </tr>
