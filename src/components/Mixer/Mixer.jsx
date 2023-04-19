@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { valves, pumps } from './data'
-import styles from './Mixer.module.scss'
+import styles from '/Mixer.module.scss'
 import bird from './../../assets/img/bird.gif'
 
 const Mixer = () => {

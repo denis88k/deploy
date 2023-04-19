@@ -126,17 +126,17 @@ $size: 30px;
         color: green;
         animation: checkShow 1.7s ease 1 0.45s forwards;
         
-@keyframes checkShow {
-    0% {
-        width: 0;
-        right: -5px;
-    }
+        @keyframes checkShow {
+            0% {
+                width: 0;
+                right: -5px;
+            }
 
-    100% {
-        width: $size;
-        right: -35px;
-    }
-}
+            100% {
+                width: $size;
+                right: -35px;
+            }
+        }
     }
 }
 
