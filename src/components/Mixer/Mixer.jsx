@@ -191,10 +191,10 @@ const Mixer = () => {
       </div>
 
       {ischeckMark && (
-            <div className={styles.bird}>
-              <img src={bird} alt="bird" />
-            </div>
-        )}
+        <div className={styles.bird}>
+          <img src={bird} alt="bird" />
+        </div>
+      )}
     </div>
   )
 }
