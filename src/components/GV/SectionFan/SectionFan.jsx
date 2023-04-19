@@ -101,7 +101,6 @@ const SectionFan = ({ styles }) => {
                     />
                 </div>
                 <div className='form__item'>
-                    {/* как точно он называется: размер колеса, диаметр колеса или как там???? */}
                     <label className='form__label'>Размер колеса (мм):</label>
                     <select
                         className='form__input'

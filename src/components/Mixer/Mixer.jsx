@@ -9,14 +9,13 @@ const Mixer = () => {
   const [resultTable, setResultTable] = useState([])
   const [ischeckMark, setIsCheckMark] = useState(false)
   const [textCheckMark, setTextCheckMark] = useState('')
-  // TODO делать проверку на NaN на ввод
 
   const roundingNumbers = 2
   const mixerName = [
-    '15 - 1', '15 - 1,6', '15 - 2,5',
-    '20 - 4', '20 - 6,3',
-    '25 - 6,3', '25 - 10', '32 - 16', '40 - 25',
-    '50 - 40'
+    '15-1', '15-1,6', '15-2,5',
+    '20-4', '20-6,3',
+    '25-6,3', '25-10', '32-16', '40-25',
+    '50-40'
   ]
 
   const solutionMixer = () => {
